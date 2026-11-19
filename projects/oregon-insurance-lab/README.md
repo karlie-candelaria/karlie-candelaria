@@ -1,6 +1,6 @@
 # Oregon Insurance Lab
 
-A single-page, dependency-free training tool for an Oregon patient access clerk. Open `index.html` in a browser. The page has a card/situation finder, searchable payer notes, and a fictional filled insurance record for each scenario. “Hide answers to practice” and a short decision check make the examples reusable.
+A single-page, dependency-free training tool for an Oregon patient access clerk. Open `index.html` in a browser, or download and open `Oregon-Insurance-Lab.html` as one self-contained file. The page has a card/situation finder, searchable payer notes, and a fictional filled insurance record for each scenario. “Hide answers to practice” and a short decision check make the examples reusable.
 
 ## Scope
 
@@ -12,7 +12,7 @@ A single-page, dependency-free training tool for an Oregon patient access clerk.
 
 ## Updating
 
-Edit the `cases` and `sources` objects in `app.js`. Each case renders one reference card and one filled practice record. Keep the cases fictional, link new payer rules to a primary source, and label local field choices **NEEDS CONFIRMATION** until verified.
+Edit the `cases` and `sources` objects in `app.js`. Each case renders one reference card and one filled practice record. Keep the cases fictional, link new payer rules to a primary source, and label local field choices **NEEDS CONFIRMATION** until verified. After edits, regenerate the self-contained file by inlining `styles.css` and `app.js` into `index.html`.
 
 ## Publishing
 
