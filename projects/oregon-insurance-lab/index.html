@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Oregon Insurance Lab · Patient Access</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to insurance types</a>
+  <header class="site-header">
+    <div class="shell header-row">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">+</span><span>Oregon Insurance Lab</span></div>
+      <a class="header-link" href="#sources">Official sources <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Patient access · Oregon · practice only</p>
+      <h1 id="page-title">Make sense of the card.<br><span>Then the account.</span></h1>
+      <p class="lede">A quick guide to recognizing coverage, checking who pays first, and practicing a fictional insurance entry.</p>
+      <div class="safety-line"><strong>ED priority:</strong> Insurance questions must not delay medical screening or stabilizing care. <a href="https://www.cms.gov/files/document/emtala-know-your-rights.pdf-0" target="_blank" rel="noopener noreferrer">CMS source</a></div>
+    </section>
+
+    <section class="three-steps" aria-label="Three decisions in order">
+      <div><span>01</span><strong>Identify</strong><small>What card or program is this?</small></div>
+      <div><span>02</span><strong>Verify</strong><small>Is it active for this visit, and who pays first?</small></div>
+      <div><span>03</span><strong>Enter</strong><small>Use the verified payer and only supported fields.</small></div>
+    </section>
+
+    <section class="finder" aria-labelledby="finder-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Start here</p><h2 id="finder-title">What did the patient bring?</h2></div>
+        <p>Choose the closest clue. You can change it at any time.</p>
+      </div>
+      <div id="clue-list" class="clue-list" role="group" aria-label="Card and situation clues"></div>
+      <div id="clue-result" class="clue-result" aria-live="polite"></div>
+    </section>
+
+    <section class="directory" aria-labelledby="directory-title">
+      <div class="section-head">
+        <div><p class="eyebrow">One-page reference</p><h2 id="directory-title">Insurance and payer types</h2></div>
+        <p>Open any type for a filled practice record.</p>
+      </div>
+      <div class="tools-row">
+        <label class="search-wrap"><span class="visually-hidden">Search payer types</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search a card, plan, or situation" autocomplete="off"></label>
+        <div id="filters" class="filters" role="group" aria-label="Filter payer types"></div>
+      </div>
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+      <div id="payer-list" class="payer-list"></div>
+    </section>
+
+    <section class="terms" aria-labelledby="terms-title">
+      <div class="section-head"><div><p class="eyebrow">Keep these straight</p><h2 id="terms-title">Five terms that do the work</h2></div></div>
+      <dl>
+        <div><dt>Primary</dt><dd>Payer billed first for this service. The order can change with employment, injury, or the type of coverage.</dd></div>
+        <div><dt>Secondary</dt><dd>Considers a claim after the primary payer. It does not promise to pay the entire remainder.</dd></div>
+        <div><dt>Eligibility</dt><dd>Whether coverage is active on the date of service. A physical card alone does not prove this.</dd></div>
+        <div><dt>CCO / Open Card</dt><dd>Two ways OHP coverage is administered. MMIS shows the current enrollment and benefit package.</dd></div>
+        <div><dt>MSPQ</dt><dd>Medicare Secondary Payer questions identify situations where another payer may come before Original Medicare.</dd></div>
+      </dl>
+    </section>
+
+    <section id="sources" class="sources" aria-labelledby="sources-title">
+      <div class="section-head"><div><p class="eyebrow">Checked November 18, 2026</p><h2 id="sources-title">Official sources</h2></div></div>
+      <p>Every rule in this guide links to its source. Benefit details and payer order still depend on the actual visit. The local Patient Logic screen, payer codes, and approved MWMC access are <strong>NEEDS CONFIRMATION</strong> until matched to your screenshot and training.</p>
+      <details class="source-details"><summary>Browse all official sources</summary><div id="source-list" class="source-list"></div></details>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell">Fictional examples only. Do not enter real patient information into this training page.</div></footer>
+
+  <dialog id="record-dialog" aria-labelledby="record-title">
+    <div class="dialog-head"><div><p class="eyebrow">Fictional practice record</p><h2 id="record-title"></h2></div><button id="close-dialog" class="icon-button" type="button" aria-label="Close practice record">×</button></div>
+    <div id="record-body"></div>
+  </dialog>
+</body>
+</html>
